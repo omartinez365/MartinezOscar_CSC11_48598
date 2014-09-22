@@ -7,7 +7,7 @@ _start:
 	MOV R2, #11
 	MOV R3, #5
 	MOV R4, #0	@ counter
-	MOV R5, #0	@ sets the flag
+	MOV R5, #1	@ sets the flag
 	CMP R5, #0
 	BEQ switch_flag_off
 
