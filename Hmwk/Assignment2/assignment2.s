@@ -4,6 +4,8 @@
 
 	.global _start
 _start:
+	MOV R0, #0
+	MOV R1, #0
 	MOV R2, #11
 	MOV R3, #5
 	MOV R4, #0	@ counter
@@ -12,24 +14,24 @@ _start:
 	BEQ switch_flag_off
 
 switch_flag_on:
-	CMP R3, R2
+	CMP R2, R3
 	SUB R2, R2, R3
 	ADD R4, R4, #1
-	CMP R3, R2
+	CMP R2, R3
 	SUB R2, R2, R3
 	ADD R4, R4, #1
-	MOV R0, R3
+	MOV R0, R2
 	MOV R1, R4
 	b end
 
 switch_flag_off:
-	CMP R3, R2
+	CMP R2, R3
 	SUB R2, R2, R3
 	ADD R4, R4, #1
-	CMP R3, R2
+	CMP R2, R3
 	SUB R2, R2, R3
 	ADD R4, R4, #1
 	MOV R0, R4
-	MOV R1, R3
+	MOV R1, R2
 end:
 	bx lr
