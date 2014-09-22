@@ -1,6 +1,5 @@
 /* Perform 11/3 and 11%3 with successive subtraction */ 
 /* With flag off r0 holds a/b and r1 holds a%b switched if flag is on*/
-
 	.global _start
 _start:
 	MOV R2, #11
