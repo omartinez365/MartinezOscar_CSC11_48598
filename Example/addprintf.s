@@ -1,4 +1,4 @@
-/Learning to add/
+/**** Learning to add ****/
 
 .data 
 
@@ -11,7 +11,7 @@ message3: .asciz "The output is: %d\n"
 .global main
 main:
 	push {lr}
-	sub, sp, sp #8
+	sub, sp, sp, #8
 
 	ldr r0, addr_message1
 	bl printf
