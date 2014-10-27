@@ -11,7 +11,7 @@ message3: .asciz "The output is: %d\n"
 .global main
 main:
 	push {lr}
-	sub, sp, sp, #8
+	sub sp, sp, #8
 
 	ldr r0, addr_message1
 	bl printf
@@ -28,10 +28,10 @@ main:
 	bl printf
 
 	add r1, sp, #4
-	ldr r1, [sp]
+	ldr r1, [r1]
 	ldr r2, [sp]
 	add r3, r2, r1
-	mov r3, r1
+	mov r1, r3
 	ldr r0, addr_message3
 	bl printf
 
