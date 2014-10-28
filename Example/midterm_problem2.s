@@ -42,14 +42,14 @@ package_a:
 	mov r3, #30
 	cmp r2, #22
 	ble additional_hours_a
-	sub r4, r1, #22	/* hours-22 */
+	sub r4, r2, #22	/* hours-22 */
 	mov r6, #6
 	mul r5, r4, r6	/* 6*(hours - 22) */ 
 	add r3, r3, r5	/* total += 6*(hours-22) */ 
-	sub r1, r1, r4	/* hours = hours - (hours - 22) */
+	sub r2, r2, r4	/* hours = hours - (hours - 22) */
 
 additional_hours_a: 
-	sub r4, r1, #11	/* hours-11 */
+	sub r4, r2, #11	/* hours-11 */
 	mov r6, #3
 	mul r5, r4, r6	/* 3*(hours - 11) */ 
 	add r3, r3, r5	/* total += 3*(hours-11) */ 
@@ -59,14 +59,14 @@ package_b:
 	mov r3, #35
 	cmp r2, #44
 	ble additional_hours_b
-	sub r4, r1, #44	/* hours-44 */
+	sub r4, r2, #44	/* hours-44 */
 	mov r6, #4
 	mul r5, r4, r6	/* 4*(hours - 44) */ 
 	add r3, r3, r5	/* total += 4*(hours-44) */ 
-	sub r1, r1, r4	/* hours = hours - (hours - 44) */
+	sub r2, r2, r4	/* hours = hours - (hours - 44) */
 
 additional_hours_b: 
-	sub r4, r1, #22	/* hours-22 */
+	sub r4, r2, #22	/* hours-22 */
 	mov r6, #2
 	mul r5, r4, r6	/* 2*(hours - 22) */ 
 	add r3, r3, r5	/* total += 2*(hours-22) */ 
@@ -76,14 +76,14 @@ package_c:
 	mov r3, #40
 	cmp r2, #66
 	ble additional_hours_c
-	sub r4, r1, #66	/* hours-66 */
+	sub r4, r2, #66	/* hours-66 */
 	mov r6, #2
 	mul r5, r4, r6	/* 2*(hours - 66) */ 
 	add r3, r3, r5	/* total += 2*(hours-66) */ 
-	sub r1, r1, r4	/* hours = hours - (hours - 66) */
+	sub r2, r2, r4	/* hours = hours - (hours - 66) */
 
 additional_hours_c: 
-	sub r4, r1, #33	/* hours-33 */
+	sub r4, r2, #33	/* hours-33 */
 	mov r6, #1
 	mul r5, r4, r6	/* 1*(hours - 33) */ 
 	add r3, r3, r5	/* total += 1*(hours-33) */ 
